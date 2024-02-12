@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="box">
+        <!-- 'box' is too general of a name -->
+        <image src="./assets/kris-circle.png" class="snimka" />
+        <!-- 
+            Try and keep order of attributes the same throught all html elements
+            example: <image class="snimka" src="./assets/kris-circle.png" /> 
+            where class is always the second called attribute 
+        -->
+        <!-- 
+            'snimka' dobre bate, ne polzvame bulgarsko tuk.
+            'image' is too general of a name, what if you happen to have another image on the page, a better name would be something like "krisPortrate" "headerPortrate" etc. 
+        -->
+        <div class="box2">
+            <!-- 'box2' is too general of a name -->
+            <!-- 
+                'box2' serves the purpouse of a header. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header
+                swap it out and give it a unique class name like "homepageHeader"
+            -->
+            <p class="introText">Kristiyan Mihaylov</p>
+            <!-- numerical order of names is not good because names lack readability this way -->
+            <!-- better: class="introText" -->
+            <!-- The P tag below serves the purpouse of a heading. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements -->
+            <!-- use headings as per the article. This should be H1. Google reads h1 first. This is what a "search match" gives back once you "google something"-->
+            <p class="introText2">Self thought Frontend Developer</p>
+            <!-- better: class="introTextCaption" -->
+        </div>
+    </div>
+    <div class="MyWork">
+        <!-- lowercase whenever possible: myWork -->
+        <div class="line"></div>
+        <!-- 
+            instead of occupying the html with an extra empty line, developers came with the idea of using pseudo-elements
+            https://developer.mozilla.org/en-US/docs/Web/CSS/::before
+            this way if you need to copy out the code, the css will do the styling and you will need to copy only one element.
+        -->
+        <p class="textNextToLine">My Work</p>
+        <!-- once you move the line in a pseudo element the name will become irrelevant, think of something better -->
+        <!-- This should be a heading not a paragraph -->
+    </div>
+    <div class="Projects">
+        <!-- lowercase classname -->
+        <div class="Project1">
+            <!-- Project1 Project2 and Project3 share the exact same styling. They can benefit of a single classname for all - read more in css -->
+            <image src="./assets/bird.jpg" class="ptichka" />
+            <!-- order of attributes as described on line 12 -->
+            <p class="razmer1">Project 1</p>
+            <!-- name is not informative -->
+            <p class="info1">Ptichkata Tits</p>
+            <!-- you don't need the numerical naming -->
+        </div>
+        <div class="Project2">
+            <!-- Project1 Project2 and Project3 share the exact same styling. They can benefit of a single classname for all - read more in css -->
+            <image src="./assets/ammo.jpg" class="patroni" />
+            <!-- order of attributes as described on line 12 -->
+            <p class="razmer2">Project 2</p>
+            <p class="info2">Malki patroni</p>
+            <!-- you don't need the numerical naming -->
+        </div>
+        <div class="Project3">
+            <!-- Project1 Project2 and Project3 share the exact same styling. They can benefit of a single classname for all - read more in css -->
+            <image src="./assets/zombie.jpg" class="dead" />
+            <!-- order of attributes as described on line 12 -->
+            <p class="razmer3">Project 3</p>
+            <p class="info3">The Walking Dead</p>
+            <!-- you don't need the numerical naming -->
+        </div>
+    </div>
+    <div class="ContactInformation">
+        <!-- lowercase class name -->
+        <div class="line2"></div>
+        <!-- use pseudo element -->
+        <p class="textNextToLine2">Contact Information</p>
+        <!-- This should be a heading not a paragraph -->
+    </div>
+    <div class="telefon">
+        <!-- НАЙС but your indian friend wont understand this. -->
+        <p class="phone">Tel: <b>08850239385</b></p>
+        <p class="email">Email: <b>barabonki@abv.bg</b></p>
+    </div>
+
+</body>
+
+</html>
+
+<!-- 
+    General:
+    - dont leave empty spaces in between lines (line 3, 7, etc...)
+    - a lot of class names are too generic and do not inform the reader of what they are.
+-->
